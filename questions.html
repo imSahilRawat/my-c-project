@@ -1,0 +1,3371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Questions</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+  <header>
+    <h1>C Practice Questions</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="questions.html">Questions</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  
+  <div class="topics-nav">
+    <a href="#basic">Basic Input/Output</a>
+    <a href="#decision">Decision Control</a>
+    <a href="#loops">Loops</a>
+    <a href="#functions">Functions</a>
+    <a href="#multiarray">Multi Array</a>
+    <a href="#operators">Operators</a>
+    <a href="#array">Array</a>
+    <a href="#string">String</a>
+    <a href="#structures">Structures</a>
+  </div>
+
+  <div class="questions">
+
+
+    <section id="basic">
+      <h2>Basic Input / Output</h2>
+
+
+
+      <div class="question">
+    <h3>Q1. Write a program to print the message: Today I made my first C Program.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    clrscr();
+    printf("Today I made my first C Program.");
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+
+
+  <div class="question">
+    <h3>Q2. Write a program to read a character from the keyboard and display it on the screen.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char ch;
+    clrscr();
+    printf("Enter a character: ");
+    ch = getch();  // takes character input without pressing Enter
+    printf("\nYou entered: %c", ch);
+    getch();
+}
+
+
+    </code></pre>
+  </div>
+
+
+
+
+
+
+   <div class="question">
+    <h3>Q3. Write a program to read only 4 characters from the keyboard and display it on the screen in a separate line.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char ch[5];
+    int i;
+    clrscr();
+
+    printf("Enter 4 characters: ");
+    for(i = 0; i < 4; i++) {
+        ch[i] = getch();
+        printf("\nCharacter %d: %c", i + 1, ch[i]);
+    }
+
+    getch();
+}
+    </code></pre>
+  </div>
+
+
+
+   <div class="question">
+    <h3>Q4. Write a program to print your name at center of the first line.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    clrscr();
+    gotoxy(30, 1); // 30th column, 1st row
+    printf("Sahil Rawat");
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+
+
+
+   <div class="question">
+    <h3>Q5. Write a program to store single quote and print that variable to show single quote on output screen.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char ch = '\'';
+    clrscr();
+    printf("Single quote stored: %c", ch);
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+  <div class="question">
+    <h3>Q6. Write a program for printing your name on output screen but your name should blink 5 times.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int i;
+    clrscr();
+
+    for(i = 1; i <= 5; i++) {
+        gotoxy(30, 10);
+        printf("Sahil Rawat");
+        delay(500);      // visible for 0.5 sec
+        clrscr();        // clear screen
+        delay(500);      // pause before showing again
+    }
+
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q7. Write a program to print your name at center of the first line.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+    clrscr();
+    gotoxy(30, 1);
+    printf("Sahil Rawat");
+    getch();
+}
+
+
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q9. Write a program to print your name at the center of the page.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    clrscr();
+    gotoxy(40, 12);  // center of 80x25 console
+    printf("Sahil Rawat");
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q10. Write a program to store single quote and print that variable to show single quote on output screen.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+void main() {
+    char quote = '\'';
+    clrscr();
+    printf("Single quote stored: %c", quote);
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q1. Write a C program to enter elements in an array and display them.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q11. Write a program for printing your name on output screen but your name should blink 5 times.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+void main() {
+    int i;
+    clrscr();
+
+    for(i = 1; i <= 5; i++) {
+        gotoxy(30, 10);
+        printf("Sahil Rawat");
+        delay(500);
+        clrscr();
+        delay(500);
+    }
+
+    getch();
+}
+
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q12. Enter password display like ********</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char pass[20];
+    int i = 0;
+    char ch;
+    clrscr();
+
+    printf("Enter Password: ");
+    while((ch = getch()) != 13) { // 13 = Enter key
+        pass[i] = ch;
+        printf("*");
+        i++;
+    }
+    pass[i] = '\0';
+
+    printf("\nPassword entered successfully!");
+    getch();
+}
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q13. Enter two characters from user and print ASCII value.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char a, b;
+    clrscr();
+
+    printf("Enter first character: ");
+    scanf("%c", &a);
+
+    printf("Enter second character: ");
+    scanf(" %c", &b); // space before %c to skip newline
+
+    printf("\nASCII value of %c = %d", a, a);
+    printf("\nASCII value of %c = %d", b, b);
+
+    getch();
+}
+    </code></pre>
+  </div>
+
+
+    <div class="question">
+    <h3>Q14. Print all ASCII characters from 0 to 127.</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int i;
+    clrscr();
+
+    printf("ASCII Table:\n");
+    for(i = 0; i <= 127; i++) {
+        printf("%3d = %c\n", i, i);
+    }
+
+    getch();
+}
+    </code></pre>
+  </div>
+
+   
+    </section>
+
+    <section id="decision">
+      <h2>Decision Control Structure</h2>
+
+
+      <div class="question">
+  <h3> 1. Write a program to enter the number from the user and check it is positive or negative or 0 (zero) ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num > 0)
+        printf("The number is positive.");
+    else if(num < 0)
+        printf("The number is negative.");
+    else
+        printf("The number is zero.");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 2. Enter a number from user and check it is odd or even ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num % 2 == 0)
+        printf("Even number");
+    else
+        printf("Odd number");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 3. Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num >= 0 && num <= 9)
+        printf("1 digit number");
+    else if(num >= 10 && num <= 99)
+        printf("2 digit number");
+    else if(num >= 100 && num <= 999)
+        printf("3 digit number");
+    else if(num >= 1000 && num <= 9999)
+        printf("4 digit number");
+    else if(num >= 10000 && num <= 99999)
+        printf("5 digit number");
+    else
+        printf("More than 5 digits");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>4. Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int marks;
+    clrscr();
+
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+
+    if(marks >= 0 && marks < 40)
+        printf("Fail");
+    else if(marks >= 40 && marks < 60)
+        printf("C Grade");
+    else if(marks >= 60 && marks < 80)
+        printf("B Grade");
+    else if(marks >= 80 && marks <= 100)
+        printf("A Grade");
+    else
+        printf("Invalid marks");
+
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 5. Enter a number from the user and check it is a decimal number or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+void main() {
+    float num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%f", &num);
+
+    if(num == (int)num)
+        printf("Not a decimal number");
+    else
+        printf("Decimal number");
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 6. Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    num = -num;
+    printf("Converted number: %d", num);
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 7. Enter a character from the user and check that it is an alphabet ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char ch;
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        printf("It is an alphabet.");
+    else
+        printf("Not an alphabet.");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 8. Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num, i;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num < 0) {
+        num = num * num;
+        printf("Square = %d", num);
+    } else {
+        for(i = 1; i <= 20; i++)
+            num++;
+        printf("After incrementing 20 times = %d", num);
+    }
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>9. Enter the number from the user it the number is negative or positive and find out of that number ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num < 0)
+        printf("Negative, Absolute value = %d", -num);
+    else
+        printf("Positive, Value = %d", num);
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 10. Enter two number from user and check which is the greater number and print the greater number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int a, b;
+    clrscr();
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+
+    if(a > b)
+        printf("%d is greater", a);
+    else
+        printf("%d is greater", b);
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 11. Enter a number from user and check it is divisible by 4 or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int num;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num % 4 == 0)
+        printf("Divisible by 4");
+    else
+        printf("Not divisible by 4");
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>12. Enter a four characters from users and check they are equal or not ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char a, b, c, d;
+    clrscr();
+
+    printf("Enter 4 characters: ");
+    scanf("%c%c%c%c", &a, &b, &c, &d);
+
+    if(a == b && b == c && c == d)
+        printf("All characters are equal.");
+    else
+        printf("Characters are not equal.");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 13. Enter three numbers from users and tell which is greater ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int a, b, c;
+    clrscr();
+
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if(a > b && a > c)
+        printf("%d is greatest", a);
+    else if(b > a && b > c)
+        printf("%d is greatest", b);
+    else
+        printf("%d is greatest", c);
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 14. Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int days;
+    clrscr();
+
+    printf("Enter number of days (28, 29, 30, 31): ");
+    scanf("%d", &days);
+
+    if(days == 28 || days == 29)
+        printf("February");
+    else if(days == 30)
+        printf("April, June, September, November");
+    else if(days == 31)
+        printf("January, March, May, July, August, October, December");
+    else
+        printf("Invalid input");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 15. Enter one digit number from user and print in words ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n;
+    clrscr();
+
+    printf("Enter one digit number: ");
+    scanf("%d", &n);
+
+    if(n == 0) printf("Zero");
+    else if(n == 1) printf("One");
+    else if(n == 2) printf("Two");
+    else if(n == 3) printf("Three");
+    else if(n == 4) printf("Four");
+    else if(n == 5) printf("Five");
+    else if(n == 6) printf("Six");
+    else if(n == 7) printf("Seven");
+    else if(n == 8) printf("Eight");
+    else if(n == 9) printf("Nine");
+    else printf("Invalid input");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>16. Enter two characters from user and check both are same or not, if not same then find out difference between them ?  </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char a, b;
+    clrscr();
+
+    printf("Enter two characters: ");
+    scanf("%c %c", &a, &b);
+
+    if(a == b)
+        printf("Both are same.");
+    else
+        printf("Not same, Difference = %d", a - b);
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 17. Enter three numbers from user and which is greater ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int a, b, c;
+    clrscr();
+
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if(a > b && a > c)
+        printf("%d is greatest", a);
+    else if(b > a && b > c)
+        printf("%d is greatest", b);
+    else
+        printf("%d is greatest", c);
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 18. Enter two digit number from user and print it in word (like 50 will be five zero) ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, tens, ones;
+    clrscr();
+
+    printf("Enter a two-digit number: ");
+    scanf("%d", &n);
+
+    tens = n / 10;
+    ones = n % 10;
+
+    if(tens == 1) printf("One ");
+    else if(tens == 2) printf("Two ");
+    else if(tens == 3) printf("Three ");
+    else if(tens == 4) printf("Four ");
+    else if(tens == 5) printf("Five ");
+    else if(tens == 6) printf("Six ");
+    else if(tens == 7) printf("Seven ");
+    else if(tens == 8) printf("Eight ");
+    else if(tens == 9) printf("Nine ");
+
+    if(ones == 0) printf("Zero");
+    else if(ones == 1) printf("One");
+    else if(ones == 2) printf("Two");
+    else if(ones == 3) printf("Three");
+    else if(ones == 4) printf("Four");
+    else if(ones == 5) printf("Five");
+    else if(ones == 6) printf("Six");
+    else if(ones == 7) printf("Seven");
+    else if(ones == 8) printf("Eight");
+    else if(ones == 9) printf("Nine");
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>19. Enter a character from user and it is in upper case, lower case, special characters or numbers ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char ch;
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+
+    if(ch >= 'A' && ch <= 'Z')
+        printf("Uppercase Letter");
+    else if(ch >= 'a' && ch <= 'z')
+        printf("Lowercase Letter");
+    else if(ch >= '0' && ch <= '9')
+        printf("Digit");
+    else
+        printf("Special Character");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 20. Enter the year from user and check its leap year or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int year;
+    clrscr();
+
+    printf("Enter year: ");
+    scanf("%d", &year);
+
+    if((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+        printf("Leap year");
+    else
+        printf("Not a leap year");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 21. Enter date, month, year and check it is valid date or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int d, m, y;
+    clrscr();
+
+    printf("Enter date (dd mm yyyy): ");
+    scanf("%d %d %d", &d, &m, &y);
+
+    if(m < 1 || m > 12 || d < 1 || d > 31)
+        printf("Invalid date");
+    else if((m == 4 || m == 6 || m == 9 || m == 11) && d > 30)
+        printf("Invalid date");
+    else if(m == 2) {
+        if(((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) && d > 29)
+            printf("Invalid date");
+        else if(!((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) && d > 28)
+            printf("Invalid date");
+        else
+            printf("Valid date");
+    } else
+        printf("Valid date");
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>22. Enter current date of DOB of user and find out difference ?  </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int d1, m1, y1, d2, m2, y2, d, m, y;
+    clrscr();
+
+    printf("Enter current date (dd mm yyyy): ");
+    scanf("%d %d %d", &d1, &m1, &y1);
+    printf("Enter birth date (dd mm yyyy): ");
+    scanf("%d %d %d", &d2, &m2, &y2);
+
+    if(d1 < d2) {
+        d1 += 30;
+        m1--;
+    }
+    if(m1 < m2) {
+        m1 += 12;
+        y1--;
+    }
+
+    d = d1 - d2;
+    m = m1 - m2;
+    y = y1 - y2;
+
+    printf("Your age: %d years, %d months, %d days", y, m, d);
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 23. Write a program to calculate area and perimeter of rectangle ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int l, b, area, perimeter;
+    clrscr();
+
+    printf("Enter length and breadth: ");
+    scanf("%d%d", &l, &b);
+
+    area = l * b;
+    perimeter = 2 * (l + b);
+
+    printf("Area = %d", area);
+    printf("\nPerimeter = %d", perimeter);
+
+    getch();
+}
+  </code></pre>
+</div>
+    </section>
+
+
+
+
+<section id="functions">
+      <h2>Functions</h2>
+
+      <div class="question">
+  <h3> 1. Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer ?
+
+</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void add(int a, int b) {
+    printf("Addition = %d\n", a + b);
+}
+
+void sub(int a, int b) {
+    printf("Subtraction = %d\n", a - b);
+}
+
+void mul(int a, int b) {
+    printf("Multiplication = %d\n", a * b);
+}
+
+void divi(int a, int b) {
+    if(b != 0)
+        printf("Division = %.2f\n", (float)a / b);
+    else
+        printf("Division by zero not possible.\n");
+}
+
+void main() {
+    int a, b;
+    
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    add(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    sub(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    add(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    mul(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    sub(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    mul(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    divi(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    divi(a, b);
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    add(a, b);
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Write a program to enter 10 number from the user add the number and display the answer ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int sumOfTen() {
+    int i, num, sum = 0;
+    for(i = 1; i <= 10; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &num);
+        sum += num;
+    }
+    return sum;
+}
+
+void main() {
+    int result = sumOfTen();
+    printf("Sum of 10 numbers = %d", result);
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Write a program to return an array from function ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int* getArray() {
+    static int arr[5];
+    int i;
+    for(i = 0; i < 5; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    return arr;
+}
+
+void main() {
+    int *p, i;
+    p = getArray();
+    printf("Array elements are:\n");
+    for(i = 0; i < 5; i++)
+        printf("%d ", *(p + i));
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 4. Making following program using local and global variable ? Factorial , Reverse , Palindrome , Prime numbers, Armstrong , Fibonacci</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int num; // global variable
+
+void factorial() {
+    int i, fact = 1;
+    for(i = 1; i <= num; i++)
+        fact *= i;
+    printf("Factorial = %d\n", fact);
+}
+
+void reverse() {
+    int n = num, rev = 0;
+    while(n != 0) {
+        rev = rev * 10 + n % 10;
+        n /= 10;
+    }
+    printf("Reverse = %d\n", rev);
+}
+
+void palindrome() {
+    int n = num, rev = 0, temp = num;
+    while(n != 0) {
+        rev = rev * 10 + n % 10;
+        n /= 10;
+    }
+    if(temp == rev)
+        printf("Palindrome\n");
+    else
+        printf("Not Palindrome\n");
+}
+
+void prime() {
+    int i, count = 0;
+    for(i = 1; i <= num; i++) {
+        if(num % i == 0)
+            count++;
+    }
+    if(count == 2)
+        printf("Prime number\n");
+    else
+        printf("Not Prime number\n");
+}
+
+void armstrong() {
+    int n = num, sum = 0, r;
+    while(n != 0) {
+        r = n % 10;
+        sum += r * r * r;
+        n /= 10;
+    }
+    if(sum == num)
+        printf("Armstrong number\n");
+    else
+        printf("Not Armstrong\n");
+}
+
+void fibonacci() {
+    int a = 0, b = 1, c, i;
+    printf("Fibonacci Series: %d %d ", a, b);
+    for(i = 2; i < num; i++) {
+        c = a + b;
+        printf("%d ", c);
+        a = b;
+        b = c;
+    }
+}
+
+void main() {
+    printf("Enter number: ");
+    scanf("%d", &num);
+    factorial();
+    reverse();
+    palindrome();
+    prime();
+    armstrong();
+    fibonacci();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>5. Swap numbers using Call by address ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void main() {
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &x, &y);
+    printf("Before swapping: x=%d y=%d\n", x, y);
+    swap(&x, &y);
+    printf("After swapping: x=%d y=%d\n", x, y);
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>6. Swap numbers using Call by function ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void swap(int a, int b) {
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping inside function: a=%d b=%d\n", a, b);
+}
+
+void main() {
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &x, &y);
+    printf("Before swapping: x=%d y=%d\n", x, y);
+    swap(x, y);
+    printf("After function call: x=%d y=%d (no change because call by value)\n", x, y);
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 7. Make function for find out power of number, enter the number and power from user ? </h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int power(int base, int exp) {
+    int result = 1;
+    for(int i = 1; i <= exp; i++) {
+        result = result * base;
+    }
+    return result;
+}
+
+void main() {
+    int base, exp, ans;
+    clrscr();   // for Turbo C screen clear
+    printf("Enter base and exponent: ");
+    scanf("%d%d", &base, &exp);
+    ans = power(base, exp);
+    printf("Power = %d", ans);
+    getch();    // to hold the screen
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3> 8. Make function for find out Cube a user entered number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+int cube(int n) {
+    return n * n * n;
+}
+
+void main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Cube = %d", cube(num));
+}
+  </code></pre>
+</div>  
+    </section>
+
+
+
+<section id="loops">
+      <h2>Loops</h2>
+
+
+
+    <div class="question">
+  <h3>1. Enter a number from the user and find out the binary of that number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, rem, bin = 0, place = 1;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while(n > 0) {
+        rem = n % 2;
+        bin = bin + rem * place;
+        place = place * 10;
+        n = n / 2;
+    }
+    printf("Binary: %d", bin);
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Enter a number from the user and check that the number is divisible by any prime number or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, i, flag = 0;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for(i = 2; i <= n / 2; i++) {
+        int j, prime = 1;
+        for(j = 2; j <= i / 2; j++) {
+            if(i % j == 0)
+                prime = 0;
+        }
+        if(prime && n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag)
+        printf("Divisible by a prime number");
+    else
+        printf("Not divisible by any prime number");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Enter a number from the user and check it is a prime number or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+void main() {
+    int n, i, flag = 0;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for(i = 2; i <= n / 2; i++) {
+        if(n % i == 0)
+            flag = 1;
+    }
+    if(flag == 0 && n > 1)
+        printf("Prime number");
+    else
+        printf("Not prime number");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>4. Enter a number from the user and print all digit of the number in separate line ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, rem;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while(n > 0) {
+        rem = n % 10;
+        printf("%d\n", rem);
+        n = n / 10;
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>5. Write a program to print your name 1 lakh times ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    long i;
+    clrscr();
+    for(i = 1; i <= 100000; i++) {
+        printf("Sahil Rawat\n");
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>6. Write a program to print a series 1 to 1 lakh ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    long i;
+    clrscr();
+    for(i = 1; i <= 100000; i++) {
+        printf("%ld ", i);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>7. Enter a number from the user and print the series from 1 to that number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, i;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++) {
+        printf("%d ", i);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>8. Enter a number from the user and print that number 100 time ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, i;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for(i = 1; i <= 100; i++) {
+        printf("%d ", n);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>9. Write a program print all the odd number between 1 to 100 ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() {
+    int i;
+    clrscr();
+    for(i = 1; i <= 100; i++) {
+        if(i % 2 != 0)
+            printf("%d ", i);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>10. Write a program print the table of 4 in the format given as below (till 20)? 4*1=4 and so on</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int i;
+    clrscr();
+    for(i = 1; i <= 20; i++) {
+        printf("4 * %d = %d\n", i, 4 * i);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>11. Enter the number from user and reverse the number?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, rev = 0, rem;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while(n != 0) {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+    printf("Reversed number = %d", rev);
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>12. Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user add it and display answer. if user enter 2 then subtract or if user enter 3 then multiply or if user enter 4 then divide or if user enter 5 then modulo or if any other number then print invalid .if user want to quit the program then user will enter Q. ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int choice, a, b;
+    char ch;
+    clrscr();
+
+    while(1) {
+        printf("\nEnter your choice:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Modulo\nQ.Quit\n");
+        printf("Choice: ");
+        scanf(" %c", &ch);
+
+        if(ch == 'Q' || ch == 'q')
+            break;
+
+        printf("Enter two numbers: ");
+        scanf("%d%d", &a, &b);
+
+        switch(ch) {
+            case '1': printf("Addition = %d\n", a + b); break;
+            case '2': printf("Subtraction = %d\n", a - b); break;
+            case '3': printf("Multiplication = %d\n", a * b); break;
+            case '4': 
+                if(b != 0)
+                    printf("Division = %d\n", a / b);
+                else
+                    printf("Cannot divide by zero!\n");
+                break;
+            case '5': printf("Modulo = %d\n", a % b); break;
+            default: printf("Invalid choice!\n");
+        }
+    }
+
+    printf("\nProgram Ended.");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>13. Enter the number from user and check its palindrome or not?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, rev = 0, rem, temp;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    while(n != 0) {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+    if(temp == rev)
+        printf("Palindrome number");
+    else
+        printf("Not palindrome");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>14. Enter two numbers from users, one is base and second is power. Write the result ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int base, power, result = 1, i;
+    clrscr();
+    printf("Enter base and power: ");
+    scanf("%d%d", &base, &power);
+    for(i = 1; i <= power; i++) {
+        result = result * base;
+    }
+    printf("Result = %d", result);
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>15. Enter a number from user and print first digit of number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while(n >= 10) {
+        n = n / 10;
+    }
+    printf("First digit = %d", n);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>16. Enter a number from user and print total from 0 to that number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, i, sum = 0;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for(i = 0; i <= n; i++) {
+        sum = sum + i;
+    }
+    printf("Total sum = %d", sum);
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>17. Enter a number from user and find out factorial of that number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, i;
+    long fact = 1;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+    printf("Factorial = %ld", fact);
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>18. Enter two numbers from user and print range from first number to second number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int a, b, i;
+    clrscr();
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    for(i = a; i <= b; i++) {
+        printf("%d ", i);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>19. Enter password from user maximum 20 digits / character press enter key if you want to exit ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char pass[20];
+    clrscr();
+    printf("Enter password (max 20 chars): ");
+    gets(pass);
+    printf("Your entered password is: %s", pass);
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>20. Write a program to print the counting 1 to 100 with one second delay ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main() {
+    int i;
+    clrscr();
+    for(i = 1; i <= 100; i++) {
+        printf("%d\n", i);
+        delay(1000);
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>21. Write a program to find out the Fibonacci series/ 1 to 100 (like 0 1 1 2 3 5 8 13………..) ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int a = 0, b = 1, c;
+    clrscr();
+    printf("%d %d ", a, b);
+    c = a + b;
+    while(c <= 100) {
+        printf("%d ", c);
+        a = b;
+        b = c;
+        c = a + b;
+    }
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>22. Enter a character from user and that character should be alphabet ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char ch;
+    clrscr();
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        printf("It is an alphabet.");
+    else
+        printf("Not an alphabet.");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>23. Check numbers from user is palindrome or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, rem, rev = 0, temp;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    while(n != 0) {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+    if(temp == rev)
+        printf("Palindrome number");
+    else
+        printf("Not palindrome");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>24. Enter a number from user and check it is Armstrong number or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, temp, rem, sum = 0;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    while(n > 0) {
+        rem = n % 10;
+        sum = sum + (rem * rem * rem);
+        n = n / 10;
+    }
+    if(sum == temp)
+        printf("Armstrong number");
+    else
+        printf("Not an Armstrong number");
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>25. Enter a number from user and check it is Armstrong number or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    int n, temp, rem, sum = 0;
+    clrscr();
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    while(n > 0) {
+        rem = n % 10;
+        sum = sum + (rem * rem * rem);
+        n = n / 10;
+    }
+    if(sum == temp)
+        printf("Armstrong number");
+    else
+        printf("Not an Armstrong number");
+    getch();
+}
+  </code></pre>
+</div>
+
+
+
+
+  <h3>26. Write a program print the pattern on the screen i.e. ? 11111 11111 11111</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int i, j;
+    clrscr();
+
+    // Outer loop for rows
+    for(i = 1; i <= 3; i++)
+    {
+        // Inner loop for columns
+        for(j = 1; j <= 5; j++)
+        {
+            printf("1");
+        }
+        printf("\n");
+    }
+
+    getch();
+}
+  </code></pre>
+</div>
+
+      
+    </section>
+
+ <div class="questions">
+
+    <section id="multiarray">
+      <h2>Multi-dimensional Array</h2>
+      <div class="question">
+  <h3>1. Enter the four number from user and print it into matrix</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[2][2], i, j;
+    clrscr();
+
+    printf("Enter 4 numbers:\n");
+    for(i = 0; i < 2; i++)
+    {
+        for(j = 0; j < 2; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    printf("\nMatrix is:\n");
+    for(i = 0; i < 2; i++)
+    {
+        for(j = 0; j < 2; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Enter the matrix from and transpose them ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[3][3], t[3][3], i, j;
+    clrscr();
+
+    printf("Enter elements of 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // Transpose
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            t[j][i] = a[i][j];
+        }
+    }
+
+    printf("\nTranspose of Matrix:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("%d ", t[i][j]);
+        }
+        printf("\n");
+    }
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Enter 2 matrix from user and add them ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[3][3], b[3][3], sum[3][3], i, j;
+    clrscr();
+
+    printf("Enter elements of first 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("\nEnter elements of second 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &b[i][j]);
+
+    // Addition
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            sum[i][j] = a[i][j] + b[i][j];
+
+    printf("\nSum of two matrices:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+            printf("%d ", sum[i][j]);
+        printf("\n");
+    }
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>4. Enter 2 matrix from user and subtract them ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[3][3], b[3][3], sub[3][3], i, j;
+    clrscr();
+
+    printf("Enter elements of first 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("\nEnter elements of second 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &b[i][j]);
+
+    // Subtraction
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            sub[i][j] = a[i][j] - b[i][j];
+
+    printf("\nSubtraction of two matrices:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+            printf("%d ", sub[i][j]);
+        printf("\n");
+    }
+
+    getch();
+}
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>5. Enter 2 matrix from user and multiply them ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[3][3], b[3][3], mul[3][3], i, j, k;
+    clrscr();
+
+    printf("Enter elements of first 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("\nEnter elements of second 3x3 matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &b[i][j]);
+
+    // Initialize result matrix
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            mul[i][j] = 0;
+
+    // Matrix multiplication
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            for(k = 0; k < 3; k++)
+                mul[i][j] += a[i][k] * b[k][j];
+
+    printf("\nMultiplication of two matrices:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+            printf("%d ", mul[i][j]);
+        printf("\n");
+    }
+
+    getch();
+}
+  </code></pre>
+</div> </div>
+</section>
+
+ <div class="questions">
+ <!-- Decision Control -->
+    <section id="operators">
+      <h2>Operators</h2>
+
+      
+      <div class="question">
+  <h3>1. Write a program to show that example of pre-increment ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+    int a=5,b;
+    clrscr();
+    b=++a;
+    printf("Pre-Increment Example:\na=%d b=%d",a,b);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Write a program to show that example of post-increment ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a=5,b;
+    clrscr();
+    b=a++;
+    printf("Post-Increment Example:\na=%d b=%d",a,b);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Write a program to show that example of pre-decrement ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a=5,b;
+    clrscr();
+    b=--a;
+    printf("Pre-Decrement Example:\na=%d b=%d",a,b);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>4. Write a program to show that example of post-decrement ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a=5,b;
+    clrscr();
+    b=a--;
+    printf("Post-Decrement Example:\na=%d b=%d",a,b);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>5. Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a,b,add,sub,mul,divi,mod;
+    clrscr();
+    printf("Enter two numbers for addition: ");
+    scanf("%d%d",&a,&b);
+    add=a+b;
+    printf("Addition=%d\n",add);
+
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d%d",&a,&b);
+    sub=a-b;
+    printf("Subtraction=%d\n",sub);
+
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d%d",&a,&b);
+    mul=a*b;
+    printf("Multiplication=%d\n",mul);
+
+    printf("Enter two numbers for division: ");
+    scanf("%d%d",&a,&b);
+    divi=a/b;
+    printf("Division=%d\n",divi);
+
+    printf("Enter two numbers for remainder: ");
+    scanf("%d%d",&a,&b);
+    mod=a%b;
+    printf("Remainder=%d",mod);
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>6. Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    long int n;
+    clrscr();
+    printf("Enter any number: ");
+    scanf("%ld",&n);
+    printf("Last digit of number = %ld",n%10);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>7. Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    float num,decimal;
+    clrscr();
+    printf("Enter any decimal number: ");
+    scanf("%f",&num);
+    decimal = num - (int)num;
+    printf("Right side of decimal point = %f",decimal);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>8. Enter a number from user and find out cube of numbers ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int n,cube;
+    clrscr();
+    printf("Enter any number: ");
+    scanf("%d",&n);
+    cube = n*n*n;
+    printf("Cube of number = %d",cube);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>9. Enter float number from user and round of the number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    float n;
+    clrscr();
+    printf("Enter any float number: ");
+    scanf("%f",&n);
+    printf("Rounded number = %.0f",n);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>10. Enter a lower case character from user and print it into upper case ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char ch;
+    clrscr();
+    printf("Enter any lowercase character: ");
+    scanf("%c",&ch);
+    if(ch>='a' && ch<='z')
+        ch = ch - 32;
+    printf("Uppercase character: %c",ch);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>11. Enter marks of students and calculate average of student’s marks ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+    int n,i;
+    float sum=0,marks,avg;
+    clrscr();
+    printf("Enter number of subjects: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        printf("Enter marks of subject %d: ",i);
+        scanf("%f",&marks);
+        sum = sum + marks;
+    }
+    avg = sum/n;
+    printf("Average marks = %.2f",avg);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>12. Calculate simple interest = (P x R x T)/ 100</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    float p,r,t,si;
+    clrscr();
+    printf("Enter Principal, Rate and Time: ");
+    scanf("%f%f%f",&p,&r,&t);
+    si = (p*r*t)/100;
+    printf("Simple Interest = %.2f",si);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+    </section>
+
+
+
+
+<div class="questions">
+
+    <section id="array">
+      <h2>Array</h2>
+   <div class="question">
+  <h3>1. Enter an array from user and display all the value ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Array elements are:\n");
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Enter an array from user and print the array in reverse order ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Array in reverse order:\n");
+    for(i=n-1;i>=0;i--)
+        printf("%d ",a[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Enter an array from user and copy the array into second array ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],b[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+        b[i]=a[i];
+    printf("Copied array:\n");
+    for(i=0;i<n;i++)
+        printf("%d ",b[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>4. Enter an array from user and copy it into another array in reverse order ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],b[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+        b[i]=a[n-1-i];
+    printf("Reversed copied array:\n");
+    for(i=0;i<n;i++)
+        printf("%d ",b[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>5. Enter an array from user and print the number which is even ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Even numbers are:\n");
+    for(i=0;i<n;i++)
+        if(a[i]%2==0)
+            printf("%d ",a[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>6. Enter an array from user and print the number which is positive ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("Positive numbers are:\n");
+    for(i=0;i<n;i++)
+        if(a[i]>0)
+            printf("%d ",a[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>7. Enter an array from user and square all the values of array ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+        a[i]=a[i]*a[i];
+    printf("Squared values:\n");
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>8. Enter 5 values of array from user and print odd number of array ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[5],i;
+    clrscr();
+    printf("Enter 5 elements:\n");
+    for(i=0;i<5;i++)
+        scanf("%d",&a[i]);
+    printf("Odd numbers are:\n");
+    for(i=0;i<5;i++)
+        if(a[i]%2!=0)
+            printf("%d ",a[i]);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>9. Enter 5 values of array from user and add all values ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[5],i,sum=0;
+    clrscr();
+    printf("Enter 5 elements:\n");
+    for(i=0;i<5;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<5;i++)
+        sum+=a[i];
+    printf("Sum of elements = %d",sum);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>10. Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found” ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[5],i,num,found=0;
+    clrscr();
+    printf("Enter 5 elements:\n");
+    for(i=0;i<5;i++)
+        scanf("%d",&a[i]);
+    printf("Enter value to search: ");
+    scanf("%d",&num);
+    for(i=0;i<5;i++)
+        if(a[i]==num)
+            found=1;
+    if(found)
+        printf("Found");
+    else
+        printf("Not Found");
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>11. Enter five values of array and sort in ascending order ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[5],i,j,temp;
+    clrscr();
+    printf("Enter 5 elements:\n");
+    for(i=0;i<5;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<5;i++)
+        for(j=i+1;j<5;j++)
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+    printf("Sorted array:\n");
+    for(i=0;i<5;i++)
+        printf("%d ",a[i]);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>12. Find maximum values of array ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i,max;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    max=a[0];
+    for(i=1;i<n;i++)
+        if(a[i]>max)
+            max=a[i];
+    printf("Maximum value = %d",max);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>13. Find minimum values of array ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    int a[100],n,i,min;
+    clrscr();
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+    printf("Enter %d elements:\n",n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    min=a[0];
+    for(i=1;i<n;i++)
+        if(a[i]<min)
+            min=a[i];
+    printf("Minimum value = %d",min);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+</div>
+</section>
+
+<div class="questions">
+
+    <section id="string">
+      <h2>String</h2>
+    
+
+        <div class="question">
+  <h3>1. Enter a string from user and convert in uppercase ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+
+void main()
+{
+    char str[100];
+    int i;
+    clrscr();
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>='a' && str[i]<='z')
+            str[i]=str[i]-32;
+    }
+    printf("%s",str);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Enter a string from user and convert into lowercase ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+
+void main()
+{
+    char str[100];
+    int i;
+    clrscr();
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>='A' && str[i]<='Z')
+            str[i]=str[i]+32;
+    }
+    printf("%s",str);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Enter a string from user and convert into sentence case ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+    char str[100];
+    int i;
+    clrscr();
+    gets(str);
+    if(str[0]>='a' && str[0]<='z')
+        str[0]=str[0]-32;
+    for(i=1;str[i]!='\0';i++)
+    {
+        if(str[i]>='A' && str[i]<='Z')
+            str[i]=str[i]+32;
+    }
+    printf("%s",str);
+    getch();
+}
+</code></pre>
+</div>
+
+
+<div class="question">
+  <h3>4. Enter a string from user and convert into title case ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main()
+{
+    char str[100];
+    int i;
+    clrscr();
+    gets(str);
+    if(str[0]>='a' && str[0]<='z')
+        str[0]=str[0]-32;
+    for(i=1;str[i]!='\0';i++)
+    {
+        if(str[i-1]==' ' && str[i]>='a' && str[i]<='z')
+            str[i]=str[i]-32;
+        else if(str[i-1]!=' ' && str[i]>='A' && str[i]<='Z')
+            str[i]=str[i]+32;
+    }
+    printf("%s",str);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>5. Enter a string from user and convert into toggle case ?</h3>
+  <pre><code>
+    #include &lt;stdio.h&gt;
+    #include &lt;string.h&gt;
+
+void main()
+{
+    char str[100];
+    int i;
+    clrscr();
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>='A' && str[i]<='Z')
+            str[i]=str[i]+32;
+        else if(str[i]>='a' && str[i]<='z')
+            str[i]=str[i]-32;
+    }
+    printf("%s",str);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>6. Enter a string from user and final length of the string ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+    #include &lt;string.h&gt;
+void main()
+{
+    char str[100];
+    int len;
+    clrscr();
+    gets(str);
+    len=strlen(str);
+    printf("%d",len);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>7. Enter a string from user and compare those string ?</h3>
+  <pre><code>
+ #include &lt;stdio.h&gt;
+    #include &lt;string.h&gt;
+void main()
+{
+    char str1[100],str2[100];
+    int x;
+    clrscr();
+    gets(str1);
+    gets(str2);
+    x=strcmp(str1,str2);
+    if(x==0)
+        printf("Same");
+    else
+        printf("Different");
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>8. Enter a string from user and concatenate the string ?</h3>
+  <pre><code>
+   #include &lt;stdio.h&gt;
+    #include &lt;string.h&gt;
+void main()
+{
+    char str1[100],str2[100];
+    clrscr();
+    gets(str1);
+    gets(str2);
+    strcat(str1,str2);
+    printf("%s",str1);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>9. Enter a string from user and copy that string into another string ?</h3>
+  <pre><code>
+    #include &lt;stdio.h&gt;
+   
+void main()
+{
+    char str1[100],str2[100];
+    clrscr();
+    gets(str1);
+    strcpy(str2,str1);
+    printf("%s",str2);
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>10. Enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+    char str[100];
+    int n,len;
+    clrscr();
+    gets(str);
+    scanf("%d",&n);
+    len=strlen(str);
+    if(n<len)
+        printf("%c",str[n]);
+    else
+        printf("out of bound");
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>11. Enter the string from user and print each character in new line ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+void main()
+{
+    char str[100];
+    int i;
+    clrscr();
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        printf("%c\n",str[i]);
+    }
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>12. Enter the string from user and copy reverse order into another string ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+    char str1[100],str2[100];
+    int i,j,len;
+    clrscr();
+    gets(str1);
+    len=strlen(str1);
+    j=0;
+    for(i=len-1;i>=0;i--)
+    {
+        str2[j]=str1[i];
+        j++;
+    }
+    str2[j]='\0';
+    printf("%s",str2);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>13. Enter two string from user and print difference each character ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main()
+{
+    char str1[100],str2[100];
+    int i;
+    clrscr();
+    gets(str1);
+    gets(str2);
+    for(i=0;str1[i]!='\0' && str2[i]!='\0';i++)
+    {
+        printf("%d\n",str1[i]-str2[i]);
+    }
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>14. Enter the string from user and enter a character , it is exist or not ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+void main()
+{
+    char str[100],ch;
+    int i,found=0;
+    clrscr();
+    gets(str);
+    scanf("%c",&ch);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==ch)
+        {
+            found=1;
+            break;
+        }
+    }
+    if(found==1)
+        printf("Exist");
+    else
+        printf("Not Exist");
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>15. Enter the string from user and enter a character if it is exist then print the bound number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char str[100],ch;
+    int i,found=0;
+    clrscr();
+    gets(str);
+    scanf("%c",&ch);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==ch)
+        {
+            printf("%d",i);
+            found=1;
+            break;
+        }
+    }
+    if(found==0)
+        printf("Not Exist");
+    getch();
+}
+
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>16. Enter the string from user and count all vowels ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char str[100];
+    int i,count=0;
+    clrscr();
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||
+           str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+            count++;
+    }
+    printf("%d",count);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>17. Enter the string from user and enter bound number and print character on that bound ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+
+void main()
+{
+    char str[100];
+    int n,len;
+    clrscr();
+    gets(str);
+    scanf("%d",&n);
+    len=strlen(str);
+    if(n<len)
+        printf("%c",str[n]);
+    else
+        printf("Out of bound");
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>18. String palindrome example (using reverse) ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+    char str1[100],str2[100];
+    int i,j,len;
+    clrscr();
+    gets(str1);
+    len=strlen(str1);
+    j=0;
+    for(i=len-1;i>=0;i--)
+    {
+        str2[j]=str1[i];
+        j++;
+    }
+    str2[j]='\0';
+    if(strcmp(str1,str2)==0)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>19. Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+    int rollno,i,cls;
+    char name[100];
+    float marks[5],total=0,avg;
+    clrscr();
+    scanf("%d",&rollno);
+    scanf("%s",name);
+    scanf("%d",&cls);
+    for(i=0;i<5;i++)
+    {
+        scanf("%f",&marks[i]);
+        total=total+marks[i];
+    }
+    avg=total/5;
+    printf("Roll No: %d\n",rollno);
+    printf("Name: %s\n",name);
+    printf("Class: %d\n",cls);
+    printf("Average: %f",avg);
+    getch();
+}
+
+  </code></pre>
+</div>
+
+
+
+
+</section>
+
+
+<div class="questions">
+
+    <section id="Structure">
+      <h2>Structures</h2>
+      <div class="question">
+  <h3>1. Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+struct Employee {
+    int empID;
+    char name[50];
+    char designation[50];
+};
+
+void main() {
+    clrscr();
+    struct Employee emp[50];
+    int i, n;
+
+    printf("Enter number of employees (max 50): ");
+    scanf("%d", &n);
+
+    for(i=0; i<n; i++) {
+        printf("\nEmployee %d ID: ", i+1);
+        scanf("%d", &emp[i].empID);
+        fflush(stdin);
+        printf("Employee %d Name: ", i+1);
+        gets(emp[i].name);
+        printf("Employee %d Designation: ", i+1);
+        gets(emp[i].designation);
+    }
+
+    printf("\nEMP ID\tNAME\tDESIGNATION\n");
+    printf("---------------------------------\n");
+    for(i=0; i<n; i++) {
+        printf("%d\t%s\t%s\n", emp[i].empID, emp[i].name, emp[i].designation);
+    }
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>2. Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+struct Employee {
+    int empID;
+    char name[50];
+    char designation[50];
+};
+
+void main() {
+    clrscr();
+    struct Employee emp[50];
+    int i, n;
+
+    printf("Enter number of employees (max 50): ");
+    scanf("%d", &n);
+
+    for(i=0; i<n; i++) {
+        printf("\nEmployee %d ID: ", i+1);
+        scanf("%d", &emp[i].empID);
+        fflush(stdin);
+        printf("Employee %d Name: ", i+1);
+        gets(emp[i].name);
+        printf("Employee %d Designation: ", i+1);
+        gets(emp[i].designation);
+    }
+
+    printf("\nEMPLOYEE NAMES\n");
+    printf("----------------\n");
+    for(i=0; i<n; i++) {
+        printf("%s\n", emp[i].name);
+    }
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>3. Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+struct Employee {
+    int empID;
+    char name[50];
+    char designation[50];
+};
+
+void main() {
+    clrscr();
+    struct Employee emp[50];
+    int i, j, n;
+
+    printf("Enter number of employees (max 50): ");
+    scanf("%d", &n);
+
+    for(i=0; i<n; i++) {
+        printf("\nEmployee %d ID: ", i+1);
+        scanf("%d", &emp[i].empID);
+        fflush(stdin);
+        printf("Employee %d Name: ", i+1);
+        gets(emp[i].name);
+        printf("Employee %d Designation: ", i+1);
+        gets(emp[i].designation);
+    }
+
+    printf("\nEMP ID\tNAME CHARACTERS\n");
+    printf("----------------------------\n");
+    for(i=0; i<n; i++) {
+        printf("%d\t", emp[i].empID);
+        for(j=0; emp[i].name[j] != '\0'; j++) {
+            printf("%c ", emp[i].name[j]);
+        }
+        printf("\n");
+    }
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+<div class="question">
+  <h3>4. Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number ?</h3>
+  <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+struct Student {
+    int roll;
+    char name[50];
+    float fee;
+    char dob[15];
+};
+
+void main() {
+    clrscr();
+    struct Student s[50], temp;
+    int i, j, n;
+
+    printf("Enter number of students (max 50): ");
+    scanf("%d", &n);
+
+    for(i=0; i<n; i++) {
+        printf("\nStudent %d Roll No: ", i+1);
+        scanf("%d", &s[i].roll);
+        fflush(stdin);
+        printf("Student %d Name: ", i+1);
+        gets(s[i].name);
+        printf("Student %d Fee: ", i+1);
+        scanf("%f", &s[i].fee);
+        fflush(stdin);
+        printf("Student %d DOB (dd/mm/yyyy): ", i+1);
+        gets(s[i].dob);
+    }
+
+    // Sort by roll number
+    for(i=0; i<n-1; i++) {
+        for(j=i+1; j<n; j++) {
+            if(s[i].roll > s[j].roll) {
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+
+    printf("\nROLL\tNAME\tFEE\tDOB\n");
+    printf("---------------------------------------\n");
+    for(i=0; i<n; i++) {
+        printf("%d\t%s\t%.2f\t%s\n", s[i].roll, s[i].name, s[i].fee, s[i].dob);
+    }
+
+    getch();
+}
+
+  </code></pre>
+</div>
+
+  
+ 
+</div>
+</section>
+
+
+</div>
+  </div>
+
+  <footer>
+    <p>© 2025 C Practice Questions | Made by Sahil Rawat</p>
+  </footer>
+
+</body>
+</html>
